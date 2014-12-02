@@ -53,6 +53,7 @@ def main():
 		logging.error("Load Conf Failled : [%s]" % ret)
 		sys.exit(-1)
 	#开始抓取
+        c.crawl()
 
 	
     

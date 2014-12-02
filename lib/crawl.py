@@ -58,7 +58,7 @@ class WebCrawl:
 
     def _read_urls(self):
         '''
-        读取待抓取的url列表
+        读取种子url
         '''
         try:
             with open(self._conf_dict['url_list_file']) as fread:
@@ -76,6 +76,9 @@ class WebCrawl:
             return zlib.decompress(data)
 
     def check_zip(self, resp):
+        '''
+        判断是否为压缩网页
+        '''
         if resp.headers.get('content-encoding') == 'gzip':
             data=resp.read()
             unzip_data=StringIO.StringIO(zlib.decompress(data, 16 + zlib.MAX_WBITS))
@@ -90,8 +93,6 @@ class WebCrawl:
             return new_resp
         else:
             return resp
-
-
 
     def crawl_page(self, url):
         '''
@@ -110,7 +111,9 @@ class WebCrawl:
                 data=resp.read()
                 encoding=chardet.detect(data)['encoding']
                 if encoding == 'GB2312':
-                    encoing='GBK'
+                    encoding='GBK'
+                if encoding == '':
+                    encoding='utf-8'
                 data=data.decode(encoding)
         except (urllib2.HTTPError, urllib2.URLError, \
             httplib.HTTPException) as e:
@@ -121,7 +124,13 @@ class WebCrawl:
         '''
         处理抓取的url，返回完整url
         '''
-        pass
+        from urlparse import urlparse,urljoin
+        url_info=urlparse(url)
+        if url_info.scheme is None:
+            tmp_url=urljoin(base_href, url)
+            return tmp_url
+        else:
+            return url
 
     def _get_urls_from_a(self, url, base_href, soup):
         '''
@@ -136,8 +145,47 @@ class WebCrawl:
             if link.find('javascript') >= 0 and link.find('href') < 0:
                 continue
             url=self._parse_url(base_href, link)
-            a_list.append(url)
-        return a_list
+            links.append(url)
+        return links
+    
+    def _get_urls_from_img(self, url, base_href, soup):
+        '''
+        从img标签抓取url
+        '''
+        links=[]
+        img_list=soup.findAll('img')
+        for img_tag in img_list:
+            link=img_tag.get('src')
+            if link is None or len(link) == 0:
+                continue
+            url=self._parse_url(base_href, link)
+            links.append(url)
+        return links
+
+    def get_urls_from_page(self, url, data):
+        '''
+        从页面抓取url主程序
+        '''
+        links=[]
+        if data is None:
+            return False
+        soup=BeautifulSoup.BeautifulSoup(data)
+        base_href=''
+        base_tag=soup.find('base')
+        if base_tag is not None:
+            base_href=base_tag.get('href')
+        links.extend(self._get_urls_from_a(url, base_href, soup)
+        links.extend(self._get_urls_from_img(url, base_href, soup)
+        return links
+
+    def mini_spider():
+        '''
+        多线程广度优先抓取
+        '''
+        pass
+        
+
+
 
     def sync_parse(self,content,desc):
 	    pass
