@@ -1,0 +1,48 @@
+2014-11-30 10:28:35,273 mini_spider.py[line:39] DEBUG TEST File
+2014-11-30 16:30:38,827 mini_spider.py[line:39] DEBUG TEST File
+2014-11-30 16:30:52,761 mini_spider.py[line:39] DEBUG TEST File
+2014-11-30 17:03:36,581 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 17:03:36,581 mini_spider.py[line:48] DEBUG No config file input!
+2014-11-30 17:05:59,694 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 17:06:27,795 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 17:06:27,795 mini_spider.py[line:48] DEBUG No config file input!
+2014-11-30 17:06:34,540 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 17:07:52,938 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 17:07:52,939 mini_spider.py[line:48] DEBUG No config file input!
+2014-11-30 17:13:20,555 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 17:14:11,087 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 19:37:14,292 mini_spider.py[line:44] DEBUG TEST File
+2014-11-30 19:37:14,292 mini_spider.py[line:47] DEBUG No config file input!
+2014-11-30 19:37:37,223 mini_spider.py[line:44] DEBUG TEST File
+2014-11-30 19:37:37,223 mini_spider.py[line:47] DEBUG No config file input!
+2014-11-30 19:39:56,825 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 19:39:56,825 mini_spider.py[line:48] DEBUG No config file input!
+2014-11-30 19:40:18,112 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 19:40:18,112 mini_spider.py[line:48] DEBUG No config file input!
+2014-11-30 19:40:23,598 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 19:41:22,384 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 19:41:22,384 mini_spider.py[line:48] DEBUG No config file input!
+2014-11-30 19:41:26,752 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 19:41:58,584 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 19:51:26,671 mini_spider.py[line:46] DEBUG TEST File
+2014-11-30 19:53:17,888 mini_spider.py[line:46] DEBUG TEST File
+2014-11-30 19:53:35,527 mini_spider.py[line:46] DEBUG TEST File
+2014-11-30 19:53:58,910 mini_spider.py[line:46] DEBUG TEST File
+2014-11-30 19:57:23,686 mini_spider.py[line:46] DEBUG TEST File
+2014-11-30 20:01:05,503 mini_spider.py[line:46] DEBUG TEST File
+2014-11-30 20:02:10,152 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:02:48,522 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:03:51,044 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:05:14,419 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:06:49,430 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:08:50,933 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:11:21,594 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:11:38,915 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:12:14,608 mini_spider.py[line:45] DEBUG TEST File
+2014-11-30 20:38:31,979 crawl.py[line:42] WARNING URL List File Not Exists [../conf/urls]
+2014-11-30 20:42:08,121 crawl.py[line:24] WARNING Need Intval Input
+2014-11-30 20:53:31,300 crawl.py[line:24] WARNING Need Intval Input
+2014-11-30 20:54:36,030 crawl.py[line:24] WARNING Need Intval Input
+2014-11-30 20:54:54,053 crawl.py[line:24] WARNING Need Intval Input
+2014-11-30 20:58:03,554 crawl.py[line:24] WARNING Need Intval Input
+2014-11-30 20:58:03,555 mini_spider.py[line:52] ERROR Load Conf Failled : [1]

@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
+VERSION='1.0'
+SUCCESS_STATUS=0
+ERROR_INVALID_CONF=1
+ERROR_INVALID_URL_FILE=2
+ERROR_INVALID_INT_CONF=3
+
